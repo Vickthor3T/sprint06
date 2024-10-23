@@ -1,0 +1,205 @@
+/* Estilos globales para ejemplos de Grid */
+.grid-example__container {
+    display: grid;
+    
+    
+    grid-template-columns: repeat(4, 200px); /* 4 columnas de 200px */
+    /*grid-template-columns: 200px 200px 200px 200px; /* 4 columnas */
+    grid-template-rows: repeat(3, 200px); /* 3 filas de 200px */
+    /*grid-template-rows: 200px 200px 200px; /* 3 filas */
+    
+    
+    gap: 10px; /* Espaciado entre celdas */
+    justify-content: center; /* Centrar el grid horizontalmente */
+    margin: 20px auto;
+  }
+  
+  .grid-example__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+/*** Ejemplo 2 **/
+
+
+  .grid-example__container--fr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas flexibles */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas flexibles */
+    width: 1000px;
+    height: 800px;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .grid-example__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+
+  /*** Ejemplo 3 ***/
+
+  .grid-example__container--5x4 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    width: 1000px;
+    height: 800px;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .grid-example__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+
+/* Estilos para Ejemplo 4 - Rowspan y Colspan con fr */
+.grid-rowspan__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas usando fr */
+    grid-template-rows: 1fr 1fr 1fr; /* 3 filas usando fr */
+    width: 1000px;
+    height: 800px;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  .grid-rowspan__item--rowspan {
+    grid-row: span 2; /* Se extiende a lo largo de 2 filas */
+  }
+  
+  .grid-rowspan__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+  /* Estilos para el ejemplo de Colspan con repeat */
+.grid-colspan__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas usando repeat */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas usando repeat */
+    width: 1000px;
+    height: 800px;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  .grid-colspan__item--colspan {
+    grid-column: span 2; /* Se extiende a lo largo de 2 columnas */
+  }
+  
+  .grid-colspan__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+  .grid-span__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 150px);  /* 2 filas de 150px */
+    gap: 10px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .grid-span__item--span-row {
+    grid-column: 1;      /* Ocupa solo la primera columna */
+    grid-row: span 2;    /* Se extiende sobre 2 filas */
+  }
+  
+  .grid-span__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+/* ejemplo 7 */
+
+
+  .grid-span__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(3, 150px);  /* 3 filas */
+    gap: 10px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .grid-span__item--span-column {
+    grid-column: 1 / 3; /* Ocupa las columnas 1 y 2 */
+    grid-row: span 3;   /* Se extiende sobre 3 filas */
+  }
+  
+  .grid-span__item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+
+  /* ejemplo 8 */
+
+  .grid-span__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-rows: repeat(3, 150px);  /* 3 filas iguales */
+  gap: 10px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.grid-span__item--full-row {
+  grid-column: 1 / -1; /* Se extiende desde la primera columna hasta la última */
+}
+
+.grid-span__item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+}
