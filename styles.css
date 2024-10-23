@@ -25,9 +25,14 @@
     padding: 10px;
   }
   
+
+
+
+
+
+
+
 /*** Ejemplo 2 **/
-
-
   .grid-example__container--fr {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas flexibles */
@@ -50,8 +55,14 @@
   }
   
 
-  /*** Ejemplo 3 ***/
 
+
+
+
+
+
+
+  /*** Ejemplo 3 ***/
   .grid-example__container--5x4 {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columnas */
@@ -75,7 +86,14 @@
 
 
 
-/* Estilos para Ejemplo 4 - Rowspan y Colspan con fr */
+
+
+
+
+
+
+
+/* Ejemplo 4 */
 .grid-rowspan__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas usando fr */
@@ -101,7 +119,14 @@
   }
 
 
-  /* Estilos para el ejemplo de Colspan con repeat */
+
+
+
+
+
+
+
+  /* Ejemplo 5 */
 .grid-colspan__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas usando repeat */
@@ -127,6 +152,10 @@
   }
 
 
+
+
+  /* Ejemplo 6 */
+
   .grid-span__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
@@ -150,6 +179,15 @@
     font-size: 16px;
     text-align: center;
   }
+
+
+
+
+
+
+
+
+
 
 /* ejemplo 7 */
 
@@ -179,6 +217,15 @@
   }
   
 
+
+
+
+
+
+
+
+
+  
   /* ejemplo 8 */
 
   .grid-span__container {
